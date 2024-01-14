@@ -12,5 +12,5 @@ RUN npm run build
 
 # Stage 2: Nginx to serve the Angular app
 FROM nginx:alpine as nginx
-COPY --from=build-stage /app/dist/frontend /usr/share/nginx/html
+COPY --from=build-stage /app/dist/angular-app /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
