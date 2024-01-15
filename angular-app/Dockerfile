@@ -1,11 +1,16 @@
 # Stage 1: Build Angular application
-FROM node:14 as build-stage
+FROM node:14-alpine as build-stage
 
 RUN mkdir -p /app
 WORKDIR /app
 
 COPY .. .
 COPY package*.json ./
+
+RUN apk add --no-cache npm
+
+ENV PATH="${PATH}:/app/node_modules/.bin"
+
 RUN npm install
 
 RUN npm run build
