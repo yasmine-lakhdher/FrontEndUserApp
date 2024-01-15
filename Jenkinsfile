@@ -88,7 +88,7 @@ pipeline {
             steps {
                 script {
                     // Create an environment file for Docker Compose
-                        echo "BUILD_NUMBER=${BUILD_NUMBER}" > .env
+                    sh "echo BUILD_NUMBER=${BUILD_NUMBER} > .env"
                     // Deploy the Docker image using docker-compose
                     sh "docker-compose up -d"
                 }
