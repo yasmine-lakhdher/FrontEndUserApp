@@ -1,5 +1,6 @@
 version: '3'
-npm-install:
+services:
+  npm-install:
     image: node:14
     volumes:
       - ./angular-app:/home/node/app
