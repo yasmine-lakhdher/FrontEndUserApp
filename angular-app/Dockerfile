@@ -1,5 +1,5 @@
 # Stage 1: Build Angular application
-FROM node:18-alpine as build-stage
+FROM node:14 as build-stage
 
 RUN mkdir -p /app
 WORKDIR /app
