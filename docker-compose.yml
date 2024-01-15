@@ -7,7 +7,7 @@ npm-install:
     command: sh -c "npm install"
 
   frontapp:
-    image: yasminelakhdher/user_app:frontapp-${BUILD_NUMBER}
+    image: yasminelakhdher/user_app:frontapp-1
     ports:
       - 4200:4200
     working_dir: /home/node/app
