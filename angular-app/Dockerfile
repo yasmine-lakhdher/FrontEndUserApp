@@ -15,6 +15,10 @@ RUN npm install
 COPY .. .
 RUN npm run build
 
+EXPOSE 4200
+
+CMD ["npm", "start"]
+
 # Stage 2: Nginx to serve the Angular app
 FROM nginx:alpine as nginx
 COPY --from=build-stage /app/dist/angular-app /usr/share/nginx/html
