@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-#RUN apk add --no-cache npm
+RUN apk add --no-cache nodejs npm
 
 #ENV PATH="${PATH}:/app/node_modules/.bin"
 
