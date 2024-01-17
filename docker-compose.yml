@@ -1,13 +1,14 @@
 version: '3'
 services:
   frontapp:
-    image: yasminelakhdher/user_app:frontapp-1
+    image: yasminelakhdher/user_app:frontapp-12
     ports:
       - 4200:4200
     working_dir: /home/node/app
     volumes:
       - ./angular-app:/home/node/app
       - node_modules:/home/node/app/node_modules
-    command: sh -c "npm install"
+    #command: sh -c "npm install"
+    command: npm start
 volumes:
   node_modules:
