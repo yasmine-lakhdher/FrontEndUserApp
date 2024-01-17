@@ -5,11 +5,11 @@ RUN mkdir -p /app
 WORKDIR /app
 
 COPY .. .
-COPY package*.json ./
+#COPY package*.json ./
 
-RUN apk add --no-cache npm
+#RUN apk add --no-cache npm
 
-ENV PATH="${PATH}:/app/node_modules/.bin"
+#ENV PATH="${PATH}:/app/node_modules/.bin"
 
 RUN npm install
 
