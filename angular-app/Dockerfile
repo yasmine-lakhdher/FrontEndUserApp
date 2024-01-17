@@ -4,8 +4,7 @@ FROM node:14-alpine as build-stage
 RUN mkdir -p /app
 WORKDIR /app
 
-COPY .. .
-#COPY package*.json ./
+COPY package*.json ./
 
 #RUN apk add --no-cache npm
 
@@ -13,6 +12,7 @@ COPY .. .
 
 RUN npm install
 
+COPY .. .
 RUN npm run build
 
 # Stage 2: Nginx to serve the Angular app
