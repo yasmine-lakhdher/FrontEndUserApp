@@ -15,7 +15,7 @@ RUN npm install
 COPY .. .
 RUN npm run build
 
-
+EXPOSE 4200
 CMD ["npm", "start"]
 
 # Stage 2: Nginx to serve the Angular app
